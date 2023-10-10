@@ -1,0 +1,153 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="header-wrapper header-wrapper--fixed {{headerAdditionalClasses}}" id="header-wrapper" data-ms-theme="fashion">
+  {{#if flash.enabled}}
+    {{> components/flash_tools}}
+  {{/if}}
+  <div class="newbar">
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" id="btncssmenu_mobile">Menu</button>
+      <div class="logo-fullcontainer">
+        <div class="logo-border-left"></div>
+           <div class="logo-cssmenu"   id="logo-cssmenu">
+            <a href="https://www.ecomconsult.ml/?preview=#">
+              <img src="https://i.postimg.cc/MZ5FZ3vw/logo-removebg-preview-resized.png" alt="Maria Bonita">
+            </a>
+          </div>
+        <div class="logo-border-right"></div>
+      </div>
+
+      <div class="searchbox-container">
+          <form class="nav-search-form" id="search-form" novalidate="">
+            <input type="text" class="nav-search-input" placeholder="{{i18n.smallPlaceholder}}" id="search-input" required="" autocomplete="off">
+            <button type="submit" class="search-btn" id="nav-search-button">
+              <div class="fa fa-search"></div>
+            </button> 
+          </form> 
+      </div>
+
+        <div class="nav-icons-group">
+            <div class="icons-account">
+                 
+            </div>
+            <div class="icons-cart">
+             <a href="#" class="icons-cart_a">
+               <i class="fa-solid fa-user"></i>
+               <span class="span-icons">Olá,<br> Bem-vindo(a)</b></span>
+             </a>  
+             <a href="https://www.ecomconsult.ml/gz/cart" class="icons-cart_a">
+               <i class="fa-solid fa-cart-shopping"></i>
+               <span class="span-icons">Finalizar compra</span>
+             </a>  
+            </div>
+        </div>
+    </div>
+<div  class="cssmenu_full_container" id="cssmenu">
+  <ul class="css-menu-dropdown">
+        <li data-js="{{this.name}}">
+            <span><img src="https://i.postimg.cc/gjxqHw15/fire.png" width="16px"> Ofertas<i class="arrow"></i></span>
+            <ul class="dropdown">
+                <li><a href="https://www.ecomconsult.ml/todos">Ver tudo</a></li>
+                <li>
+                    <span>Linhas<i class="arrow"></i></span>
+                    <ul class="dropdown">
+                        <li><a href="https://www.ecomconsult.ml/MLB-3026114954-item-de-teste-por-favor-no-colocar-venda-05-_JM">Outono <img src="https://i.postimg.cc/N0R49wHC/autumn.png" style="width:16px;vertical-align:middle;"/></a></li>
+                        <li><a href="https://www.ecomconsult.ml/MLB-3026215954-item-de-teste-por-favor-no-colocar-venda-07-_JM">Inverno <img src="https://i.postimg.cc/9FStLfPN/snowflake.png" style="width:16px;vertical-align:middle;"/></a></li>
+                        <li><a href="https://www.ecomconsult.ml/MLB-3026153662-item-de-teste-por-favor-no-colocar-venda-09-_JM">Primavera <img src="https://i.postimg.cc/8cptgnsK/flor.png" style="width:16px;vertical-align:middle;"/></a></li>
+                    </ul>
+                </li>
+                <li data-js="{{this.name}}">
+                    <span>
+                        <img src="https://i.postimg.cc/NfQWQpWw/mariabonita-mobile.png" style="margin:10px;width:80px;vertical-align:middle;" />
+                        <i class="arrow"></i>
+                        Verão
+                        <img src="https://i.postimg.cc/mrZYDFTk/sun.png" style="width:16px;vertical-align:middle;"/>
+                    </span>
+                    <ul class="dropdown">
+                        <li><a href="https://www.ecomconsult.ml/praia">Moda Praia</a></li>
+                        <li><a href="https://www.ecomconsult.ml/MLB-3026261476-item-de-teste-por-favor-no-colocar-venda-16-_JM">Moda Casual</a></li>
+                        <li><a href="https://www.ecomconsult.ml/MLB-3026259645-item-de-teste-por-favor-no-colocar-venda-06-_JM">Moda Noite</a></li>
+                        <li><a href="https://www.ecomconsult.ml/MLB-3026228381-item-de-teste-por-favor-no-colocar-venda-07-_JM">Tendencias</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li data-js="{{this.name}}">
+            <a href="https://www.ecomconsult.ml/acess%C3%B3rios">
+            <img src="https://i.postimg.cc/jS4g5fTQ/brincos.png" width="18px">
+            Acessórios</a>
+        </li>
+              <li>
+          <span><img src="https://i.postimg.cc/66VGFff0/calca.png" width="16px"> Calças<i class="arrow"></i></span>
+          <ul class="dropdown right0">
+                <li><a href="https://www.ecomconsult.ml/_CustoFrete_Gratis">Em promoção</a></li>
+                <li><a href="https://www.ecomconsult.ml/MLB-3026229252-item-de-teste-por-favor-no-colocar-venda-12-_JM">piscou, perdeu!</a></li>
+                <li>
+                  <span>
+                     <img src="https://i.postimg.cc/J47brkxF/maria-bonita.png" style="margin:10px;width:90px;vertical-align:middle;" />
+                    <i class="arrow"></i>
+                  </span>
+                    Ta na vitrine<div class="component-wrapper">…</div>
+                  <ul class="dropdown right0">
+                    <li><a href="https://www.ecomconsult.ml/lista/calcados-roupas-bolsas/">Garrafinhas</a></li>
+                    <li><a href="https://www.ecomconsult.ml/MLB-3026242334-item-de-teste-por-favor-no-colocar-venda-13-_JM">Bonés</a></li>
+                    <li><a href="https://www.ecomconsult.ml/MLB-3026114954-item-de-teste-por-favor-no-colocar-venda-05-_JM#position=3&search_layout=grid&type=item&tracking_id=f7801b05-6c20-4e70-9a43-7098c60badf4">Silks</a></li>
+                  </ul>
+              </li>
+          </ul>
+      </li>
+        <li  data-js="{{this.name}}" class="full-width">
+            <span><img src="https://i.postimg.cc/zvwWjn0x/logo.png" width="18px"> MB e Você<i class="arrow"></i></span>
+            <div class="dropdown">
+                <div class="clm">
+                    <h3>Modelagem</h3>
+                    <a href="https://www.ecomconsult.ml/MLB-2910599888-item-de-teste-por-favor-no-colocar-venda--_JM">Roupas</a>
+                    <a href="https://www.ecomconsult.ml/intimo">Intimo</a>
+                    <a href="https://www.ecomconsult.ml/praia">Praia</a>
+                </div>
+                <div class="clm">
+                    <h3>Histórias</h3>
+                    <a href="https://www.ecomconsult.ml/MLB-2910599888-item-de-teste-por-favor-no-colocar-venda--_JM">Campanhas</a>
+                    <h3>Produtos</h3>
+
+                    <a href="https://www.ecomconsult.ml/produtos">Bazar</a>
+                </div>
+                <div class="clm">
+                    <a href="https://www.ecomconsult.ml/MLB-2910599888-item-de-teste-por-favor-no-colocar-venda--_JM"><img src="https://i.postimg.cc/pdVT8fhN/maria-bonita3.png" style="width:280px;" /></a>
+                </div>
+            </div>
+        </li>
+  </ul>  
+</div>
+{{!-- Modal --}}
+<div class="modal-window" id="modal-window">
+  <div class="modal-box">
+    <h3 class="modal-title">PROMOÇÃO MARIA BONITA</h3>
+    <div  class="modal-timer" id="timer"></div>
+    <button class="fechar" id="fechar">X</button>
+  </div>
+</div>
+
+
+<!-- mobile only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+      <ul>
+        <li><a href="https://www.ecomconsult.ml/moda">Moda</a></li>
+        <li><a href="https://www.ecomconsult.ml/lista/mais-categorias/outros/">Studio</a></li>
+        <li><a href="https://www.ecomconsult.ml/lista/mais-categorias/outros/">MB e VC</a></li>
+        <li><a href="https://www.ecomconsult.ml/lista/mais-categorias/outros/">Original MB</a></li>
+      </ul>
+      <img src="https://i.postimg.cc/NfQWQpWw/mariabonita-mobile.png" style="margin:35px;width:300px;vertical-align:middle;" />
+  </div>
+</div>
+
+
+
+
+
+

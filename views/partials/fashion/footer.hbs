@@ -1,0 +1,193 @@
+<footer>
+  <div class="fashion-nav-footer-contact">
+    <div class="fashion-nav-footer-contact__content">
+      <div class="nav-bounds nav-bounds--contact">
+        <div class="fashion-nav-footer__brand-col header--custom-text">
+          {{#if logo}}
+          <a class="nav-fashion-header__logo" href="/" id="logo-wrapper">
+            <span class="nav-header__title-hidden">{{name}}</span>
+            <img class="nav-header__image" src="{{logo}}" alt="{{name}}" itemprop="logo" />
+          </a>
+          {{else}}
+          <h3 class="nav-footer-contact-title header--custom-text">
+            <a href="/">{{name}}</a>
+          </h3>
+          {{#each menu}}
+                <span class="fashion-nav-footer__category">
+                  <a href="{{url}}" data-id="{{id}}" class="header--custom-text">
+                  {{name}}
+                  </a>
+                </span>
+              {{/each}}
+          {{/if}}
+          {{#if logoCaption}}
+          <p class="fashion-nav-footer__logo-caption">{{{logoCaption}}}</p>
+          {{/if}}
+          <div class="fashion-nav-footer__social-media--responsive">
+            {{#each socialNetworks}}
+            <a href="{{url}}" rel="noreferrer noopener nofollow" target="_blank" class="header--custom-svg">
+              {{> (concat 'icons/social_networks/' (lookup . 'name'))}}
+            </a>
+            {{/each}}
+          </div>
+        </div>
+
+        <div class="fashion-nav-footer__categories-col">
+         <h3 class="newsletter-footer-title">Assine e Saiba mais!</h3>
+         <input class="newsletter-input" type="text" name="email" placeholder="Seu nome" size="50">
+         <input class="newsletter-input" type="text" name="Name" placeholder="E-mail válido" size="50">
+         <button class="newsletter-button">Enviar</button>
+        </div>
+
+        <div class="fashion-nav-footer__pages header--custom-border">
+          <span class="fashion-nav-footer__page">
+            <a href="https://www.youtube.com/watch?v=Nvgois1mgW4" class="fashion-nav-footer__page__link">
+            About Us MB</a>
+          </span>
+        </div>
+
+        <div class="fashion-nav-footer__contact-col">
+          <div class="fashion-nav-footer__social-media">
+            {{#each socialNetworks}}
+            <a href="{{url}}" rel="noreferrer noopener nofollow" target="_blank" class="header--custom-svg">
+              {{> (concat 'icons/social_networks/' (lookup . 'name'))}}
+            </a>
+            {{/each}}
+          </div>
+          {{#if showContact}}
+          <ul class="fashion-nav-footer__contact header--custom-border">
+            {{#if showPhone}}
+            <li class="contact-phone-number">
+              <a class="header--custom-text" itemprop="telephone" href="tel:{{phone.raw}}" rel="nofollow">Tel:
+                {{phone.formatted}}</a>
+            </li>
+            {{/if}}
+            {{#if showEmail}}
+            <li class="contact-mail">
+              <a class="header--custom-text" itemprop="email" href="mailto:{{email}}" rel="nofollow">{{email}}</a>
+            </li>
+            {{/if}}
+            {{#if address}}
+            {{#with address}}
+            <li>
+              <a class="header--custom-text" itemprop="streetAddress">{{address}}</a>
+              <a class="header--custom-text" itemprop="addressLocality">{{city}}</a>
+              <a class="header--custom-text" itemprop="addressRegion">{{state}}</a>
+            </li>
+            {{/with}}
+            {{/if}}
+            <meta itemprop="contactType" content="customer service" />
+          </ul>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div role="contentinfo" class="fashion-nav-footer nav-footer header--custom-text">
+    <div class="nav-bounds nav-bounds--copyright">
+      <div class="nav-footer-primaryinfo">
+        <small class="nav-footer-copyright">
+          <div class="nav-footer-disclaimer">
+            <div>
+              <div class="nav-footer-about">
+                <a href="{{{linkToMShopsLandingPage}}}" target="_blank" class="header--custom-text">{{i18n.powered_by}}</a>
+                {{#if linkToLegalNotices}}
+                  <a href="{{linkToLegalNotices.href}}" class="header--custom-text">{{linkToLegalNotices.label}}</a>
+                {{/if}}
+                {{#if linkToLGPD}}
+                  <a href="{{linkToLGPD.href}}" class="header--custom-text">{{linkToLGPD.label}}</a>
+                {{/if}}
+              </div>
+              {{#if showBusinessData}}
+                {{#with fiscalData}}
+                  <div class="nav-footer-fiscal-data">
+                    <p class="nav-footer-fiscal-data__name">{{legal_name}}</p>
+                    <p class="nav-footer-fiscal-data__id">{{legal_doc}}</p>
+                  </div>
+                {{/with}}
+              {{/if}}
+            </div>
+            {{#if showQrData}}
+            {{#with fiscalData}}
+            <a href={{qr_link}} target="_F960AFIPInfo">
+              <img class="nav-footer-afip-img" src={{qr_img}} alt="Data fiscal" />
+            </a>
+            {{/with}}
+            {{/if}}
+          </div>
+        </small>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+  function openSide(){
+    document.getElementById('menu_sidebar__mobile').style.display = "block";
+    
+  }
+  //const sidebarMobile = document.getElementById('menu_sidebar__mobile')
+  //sidebarMobile.style.display = "block";
+    
+  
+  function closeSide(){
+    document.getElementById('menu_sidebar__mobile').style.display = "none";
+  }
+  //sidebarMobile.addEventListener('click', (e) =>{
+  //if(e.target.id == 'menu_close__mobile'){
+  //sidebarMobile.style.display = "none";
+  //}
+  //})
+  
+  //-- Modal --//
+function openModal(){
+  const modal = document.getElementById('modal-window')
+  modal.classList.add('abrir')
+
+  modal.addEventListener('click', (e) =>{
+    if(e.target.id =='fechar' || e.target.id == 'modal-window'){
+      modal.classList.remove('abrir')
+    }
+  })
+}
+
+
+//---timer---//
+function startTimer(duration, display){
+var timer = duration, minutes, seconds;
+
+
+setInterval(function(){
+  minutes = parseInt(timer / 60, 10);
+  seconds = parseInt(timer % 60, 10);
+
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
+
+
+  display.textContent = minutes + ":" + seconds;
+    if(--timer < 0){
+      timer = duration;
+    }
+}, 1000);
+}
+
+//---openwindow--//
+window.onload = function(){
+  var duration = 60 * 3; 
+  var display = document.querySelector("#timer");
+  startTimer(duration, display);
+  let myModal = new openModal(
+    document.getElementById("modal-window"),{}
+  );
+};
+</script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+
+  $(function () {
+    $('link[rel="shortcut icon"]').attr("href", "https://i.postimg.cc/d3Bv5Zbz/android-icon-36x36.png");
+    $(function () {
+      $('link[rel="icon"]').attr("href", "https://i.postimg.cc/d3Bv5Zbz/android-icon-36x36.png");
+    });
+  });
+</script>
